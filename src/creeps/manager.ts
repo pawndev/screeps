@@ -8,7 +8,7 @@ export class CreepManager {
   }
 
   public checkIfEnoughResourceToHire(spawn: StructureSpawn, body: BodyPartConstant[]) {
-    return spawn.energy >= body.map(role => BODYPART_COST[role]).reduce((a, b) => a + b, 0)
+    return spawn.energy >= body.map(role => BODYPART_COST[role]).reduce((a, b) => a + b, 0);
   }
 
   public checkJobOpening(spawn: StructureSpawn) {
@@ -18,7 +18,7 @@ export class CreepManager {
       harvester.length < 1 ? new JobDescription(CreepRole.HARVESTER) : undefined,
       upgrader.length < 2 ? new JobDescription(CreepRole.UPGRADER) : undefined
     ].filter(isDefined);
-    return jobs_open
+    return jobs_open;
   }
 
   public hireCreep(spawn: StructureSpawn, job: JobDescription) {

@@ -1,8 +1,8 @@
 import { Logger } from "logger";
 import { ErrorMapper } from "utils/ErrorMapper";
 import { getCurrentSongLine } from "utils/sing";
-import { CreepLeader } from './creeps/leader'
-import { CreepManager } from './creeps/manager'
+import { CreepLeader } from './creeps/leader';
+import { CreepManager } from './creeps/manager';
 // import './prototypes/Room';
 import { GarbageMan } from './utils/GarbageMan';
 
@@ -23,7 +23,7 @@ export const loop = ErrorMapper.wrapLoop(() => {
       if (haveEnoughEnergy) {
         boss.hireCreep(spawn, job);
       }
-    })
+    });
   }
 
   for (const creep_name in Game.creeps) {

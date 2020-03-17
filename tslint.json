@@ -21,6 +21,10 @@
       true,
       "allow-declarations"
     ],
+    "semicolon": [
+      true,
+      "always"
+    ],
     "variable-name": [
       true,
       "ban-keywords",
